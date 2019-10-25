@@ -1,1 +1,1 @@
-../preferenceloader/prefs.h
+/opt/theos/vendor/include/libprefs/prefs.h

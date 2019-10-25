@@ -15,8 +15,8 @@ libapplist_USE_MODULES = 0
 BUNDLE_NAME = AppList
 AppList_OBJC_FILES = ALApplicationPreferenceViewController.m
 AppList_FRAMEWORKS = UIKit CoreGraphics
-AppList_PRIVATE_FRAMEWORKS = Preferences
-AppList_LDFLAGS = -L$(FW_OBJ_DIR)
+# AppList_PRIVATE_FRAMEWORKS = Preferences
+AppList_LDFLAGS = -L$(FW_OBJ_DIR) Preferences.tbd
 AppList_LIBRARIES = applist
 AppList_INSTALL_PATH = /System/Library/PreferenceBundles
 AppList_USE_MODULES = 0
@@ -24,9 +24,9 @@ AppList_USE_MODULES = 0
 
 THEOS_PLATFORM_SDK_ROOT_armv6 = /Applications/Xcode_Legacy.app/Contents/Developer
 ifneq ($(wildcard $(THEOS_PLATFORM_SDK_ROOT_armv6)/*),)
-THEOS_PLATFORM_SDK_ROOT_armv7 = /Volumes/Xcode/Xcode.app/Contents/Developer
-THEOS_PLATFORM_SDK_ROOT_armv7s = /Volumes/Xcode/Xcode.app/Contents/Developer
-THEOS_PLATFORM_SDK_ROOT_arm64 = /Volumes/Xcode_9.4.1/Xcode.app/Contents/Developer
+THEOS_PLATFORM_SDK_ROOT_armv7 = /Applications/Xcode.app/Contents/Developer
+THEOS_PLATFORM_SDK_ROOT_armv7s = /Applications/Xcode.app/Contents/Developer
+THEOS_PLATFORM_SDK_ROOT_arm64 = /Applications/Xcode.app/Contents/Developer
 SDKVERSION_armv6 = 5.1
 INCLUDE_SDKVERSION_armv6 = latest
 TARGET_IPHONEOS_DEPLOYMENT_VERSION = 7.0
